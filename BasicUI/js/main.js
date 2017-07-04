@@ -26,17 +26,11 @@ function func()
 	var h=window.innerHeight;
 	alert(w+'x'+h);
 }
-function show()
-{
-//	var img = document.createElement('IMG');
-//	img.src = "images/hulk.png";
-//	img.width = 100;
-//	img.height = 100;	
-//	document.body.appendChild(img)
-	document.getElementById("img").style.display;
 
-}
+
+
+
 function hide() {
-	document.getElementById("img").style.display="none";
-	
-}
+	var img = document.getElementById('img');
+    img.style.visibility = (img.style.visibility=='visible')? "hidden":"visible";
+	    }
