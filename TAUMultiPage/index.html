@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width,user-scalable=no"/>
+	<link rel="stylesheet"  href="./lib/tau/mobile/theme/default/tau.css">
+	<link rel="stylesheet" type="text/css" href="./css/style.css"/>
+	<title>Tizen Web IDE - Template - Tizen - Tizen Web UI Framework - Multi Page</title>
+</head>
+
+<body>
+	<!-- Start of first page: #one -->
+	<div class="ui-page" id="one">
+		<div class="ui-header">
+			<h1>Multi-page application</h1>
+		</div><!-- /header -->
+				<ul class="ui-listview">
+			 <li class="ui-group-index">Show internal pages:</li>
+				 <li class="ui-li-anchor"><a href="#popup" data-rel="popup" data-position-to="window">Show page "popup"</a></li>
+				 <li class="ui-li-anchor"><a href="#two">Show page "two"</a></li>
+				 <li class="ui-li-anchor"><a href="#three">Show page "video"</a></li>
+				 <li class="ui-li-anchor"><a href="#four">Show page "picture"</a></li>
+				 
+				 
+			</ul>
+		
+			<div id="popup" class="ui-popup center_title_1btn">
+				<div class="ui-popup-header">Popup title</div>
+				<div class="ui-popup-content popup-content-padding">Pop-up dialog box, a child window that blocks user interact to the parent windows</div>
+				<div class="ui-popup-footer">
+					<a class="ui-btn ui-inline" data-rel="back">Button</a>
+		</div>
+		
+		
+			</div>
+			   <img id="img" src="images/hulk.png"  width="200" height="250" >
+   		<button onclick="hide()"> show/hide </button>
+		<button onclick="func()"> resolution </button>
+		</div><!-- /content -->
+			
+	
+
+	
+	</div><!-- /page one -->
+
+
+	<!-- Start of second page: #two -->
+	<div class="ui-page" id="two">
+		<div class="ui-header">
+			<h1>Two</h1>
+		</div><!-- /header -->
+
+		<div class="ui-content">
+			<h2>Two</h2>
+		
+			<p id="color_txt"  onclick="paint()">I have an id of "two" on my page container. I'm the second
+				page container in this multi-page template.</p>
+			<p><a href="#one" class="ui-btn ui-inline">Back to page "one"</a></p>
+		</div><!-- /content -->
+	</div><!-- /page two -->
+
+
+	<!-- Start of second page: #three -->
+	<div class="ui-page" id="three">
+		<div class="ui-header">
+			<h1>Video</h1>
+		</div><!-- /header -->
+
+		<div class="ui-content">
+			 <body>
+ <video width="400" height="300" controls="controls" >
+   <source src="video/_TouchCube.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+
+  </video>
+  
+<iframe width="320" height="240" src="https://www.youtube.com/embed/y2ivHgTV-R4?ecver=1" frameborder="0" allowfullscreen></iframe>
+<p><a href="#one" class="ui-btn ui-inline">Back to page "one"</a></p>
+</div><!-- /content -->
+	</div><!-- /page two -->
+	
+	
+	
+	<div class="ui-page" id="four">
+		<div class="ui-header">
+			<h1>Picture</h1>
+		</div><!-- /header -->
+		<div class="ui-content">
+<canvas id='draw' width='240' height='180' style='border:1px solid;'></canvas> 
+<script type='text/javascript'>
+var canvas=document.getElementById("draw")
+var x=canvas.getContext("2d");
+var j=canvas.getContext("2d");
+var h=canvas.getContext("2d");
+var c=canvas.getContext("2d");
+x.font="30px arial"
+x.fillText("Tizen", 15, 40); 
+x.fillStyle="black";
+j.fillText("JavaScript", 15, 70); 
+j.fillStyle="red";
+h.fillText("HTML", 10, 120);
+h.fillStyle="blue";
+c.fillText("canvas",50, 130);
+</script>
+
+			<p><a href="#one" class="ui-btn ui-inline">Back to page "one"</a></p>
+				<p><a href="#five" class="ui-btn ui-inline">animation</a></p>
+							<p><a href="#six" class="ui-btn ui-inline">board</a></p>
+			
+		</div><!-- /content -->
+
+	</div><!-- /page two -->
+	
+	
+	
+	<div class="ui-page" id="five">
+		<div class="ui-header">
+			<h1>Animation</h1>
+		</div><!-- /header -->
+		<div class="ui-content">
+<canvas id='drawingCanvas' width='300' height='400' style='border:1px solid;'></canvas> 
+
+
+			<p><a href="#one" class="ui-btn ui-inline">Back to page "one"</a></p>
+			
+		</div><!-- /content -->
+
+	</div><!-- /page two -->
+	
+		<div class="ui-page" id="six">
+		<div class="ui-header">
+			<h1>ChessBoard</h1>
+		</div><!-- /header -->
+		<div class="ui-content">
+<canvas id='board' width='400' height='400' style='border:1px solid;'></canvas> 
+<script type='text/javascript'>
+drawboard();
+</script>
+
+			<p><a href="#one" class="ui-btn ui-inline">Back to page "one"</a></p>
+			
+		</div><!-- /content -->
+
+	</div><!-- /page two -->
+
+
+	
+
+	<script type="text/javascript" src="./lib/tau/mobile/js/tau.js"></script>
+	<script type="text/javascript" src="./lib/tau/mobile/js/jquery.js"></script>
+	<script src="./js/main.js"></script>
+</body>
+</html>
