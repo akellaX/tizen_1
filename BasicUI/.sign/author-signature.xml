@@ -8,23 +8,19 @@
 </Reference>
 <Reference URI="css%2Fstyle.css">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>Yc5/Km/O7fXXLzDC0Xc34K+k00+3OFIEkRFZXNT7pAI=</DigestValue>
+<DigestValue>9ETrejQL9e+Y/zMsVTtgBUD5L0rxsWn4lNaz38xBMI8=</DigestValue>
 </Reference>
 <Reference URI="icon.png">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
 <DigestValue>1d0oEZHqPn+QzNzGIHwj9ODby6x9ggFs9uOsav6jPNs=</DigestValue>
 </Reference>
-<Reference URI="images%2Ftizen_32.png">
-<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>eDr9ZPFlGlapLDnI1BiALwqovNdBvx3Aspc/lWOH3WI=</DigestValue>
-</Reference>
 <Reference URI="index.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>vK73PtP7FGlsIb2sihFvwAJX+Ks+GVb8TmdIxtcPGAA=</DigestValue>
+<DigestValue>engdhRtBy2XmNlASKGfECDtNaHN1XafKgQQ3k60ayh4=</DigestValue>
 </Reference>
 <Reference URI="js%2Fmain.js">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>w1nM4fGtFaoLC3nYKx+3P5twAWunve6foHDsA5kJReY=</DigestValue>
+<DigestValue>P/oEkJl7CL989lwh7z/UKKlrsBWiA0h5sAAaJAHp+R4=</DigestValue>
 </Reference>
 <Reference URI="#prop">
 <Transforms>
@@ -35,11 +31,11 @@
 </Reference>
 </SignedInfo>
 <SignatureValue>
-E3lmIX9aQCcTi2PCG1idUB4w2ScCcijMUz8QlRoUV6qs8pQBjlgwYhY5+jIByfP87F7J9WoIJm3o
-XkHBpTJdXr9sSDXezz6wwCVvSqUw/25YV/3o04juaQKO8RP4hCfgpRAVUgnbKX0jkIQGrGFCF4sJ
-kC+19jr5UchOIcSZ2221ib2UamCUANRZhMSd48yD688dC7pdo+InJInTvc+GVsAI9j6fzriv803m
-mQJsNHCPLNRmIhoKrF0J9bZONQ1wd+msRWrRCNGyZIhOpHduBuLqFP4AmNeeGpNbfwawC9LNy1iY
-46o8S4Zky7q4LN5RPVdhxyqzy4wyyCuSxzV+Cg==
+P6J6SpF7hUN5rbtW1EmxXMZ7+Mwndd3tr2Jk9YEJYD7k2i/ZdmSKhLyCVpM/+s8xMgtjNOpP1bVA
+QClr41CaqM4tiGQKJWpbRqxVKh8x/Herw+qrNPgCC3qnsB0YOU5RE0geZ51EKaxtd4qYSQQKUxtf
+SFVF8g7V2W+waoVLc32+tuDuOUo2KFHR0WKS0kzkQ9nBJdt9O+hPm+PgE5vu/v2DOSdONwSci8VD
+i0xNsgRYG6Xzuhu5+lW8+79kmrAhVlHtvbhOUB9NmJT6xp+I4Ai006gmG9KyMcgWcVOxC2zz5SgB
+XOWWKbitibhd/uJf/kL7jJoUaIPXHMd7UsZ7TA==
 </SignatureValue>
 <KeyInfo>
 <X509Data>

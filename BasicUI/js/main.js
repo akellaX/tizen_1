@@ -20,17 +20,17 @@ window.onload = function() {
         contentText.innerHTML = (contentText.innerHTML === "Basic") ? "Tizen" : "Basic";
     });
 };
-function func()
-{
-	var w=window.innerWidth;
-	var h=window.innerHeight;
-	alert(w+'x'+h);
-}
-
-
-
-
-function hide() {
-	var img = document.getElementById('img');
-    img.style.visibility = (img.style.visibility=='visible')? "hidden":"visible";
-	    }
+//function func()
+//{
+//	var w=window.innerWidth;
+//	var h=window.innerHeight;
+//	alert(w+'x'+h);
+//}
+//
+//
+//
+//
+//function hide() {
+//	var img = document.getElementById('img');
+//    img.style.visibility = (img.style.visibility==='visible')? "hidden":"visible";
+//	    }
