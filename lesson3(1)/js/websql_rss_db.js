@@ -1,4 +1,3 @@
-
 window.onload = function () {
 	
 	var indicator = document.getElementById("indicator");
@@ -9,7 +8,7 @@ window.onload = function () {
 
 
 var baseName 	  = "WebBase";
-var storeName 	  = "WebBaseStore";
+var storeName 	  = "WebBaseStore2";
 
 
 
@@ -38,13 +37,14 @@ function getFeed(){
 			indicator.style.display = "none";
 
 		    $(xml).find("item").each(function () {
-		    	  var url = Urlfunc($(this).find("enclosure").attr('url'))
+		    	  var url=$(this).find("enclosure").attr('url')
 
 			        $("#rssContent").append('<div class="feed"><div class="image"><img src=' + url + ' width=' + width + 'px /><div class="title"> Title:' + $(this).find("title").text() 
-			        		+ '</div><br><div class="description">Desc: ' + $(this).find("description").text() + '</div></div>');
+			        		+ '</div><br><div class="description">Desc: ' + $(this).find("description").text() + '</div><div class="pubDate"> pubDate:' + $(this).find("pubDate").text() 
+				        		+ '</div></div>');
 
-
-		    	  setData($(this).find("title").text(), $(this).find("description").text(),url) ; // чем плоха данная схема? переделать на передачу массива.
+		    	  var base=Urlfunc(url);
+		    	  setData($(this).find("title").text(), $(this).find("description").text(),url,$(this).find("pubDate").text()) ; // чем плоха данная схема? переделать на передачу массива.
 		          
 
 		          
@@ -66,14 +66,14 @@ function getFeed(){
      	
      	
          
-         function setData(title_, description_, image_){
+         function setData(title_, description_, image_,pubDate_){
 
         	 db.transaction(function (tx) {
- tx.executeSql('CREATE TABLE IF NOT EXISTS ' + storeName + ' (id INTEGER PRIMARY KEY AUTOINCREMENT, title TEXT, description TEXT, image TEXT)', [],
+ tx.executeSql('CREATE TABLE IF NOT EXISTS ' + storeName + ' (id INTEGER PRIMARY KEY AUTOINCREMENT, title TEXT, description TEXT, image TEXT,pubDate TEXT)', [],
 		 null,
 		 null);            
 
-  tx.executeSql('INSERT INTO ' + storeName + ' (title, description, image) VALUES (?, ?, ?)', [title_, description_, image_], null, onError);
+  tx.executeSql('INSERT INTO ' + storeName + ' (title, description, image, pubDate) VALUES (?, ?, ?, ?)', [title_, description_, image_, pubDate_], null, onError);
          });
          };
          
@@ -88,7 +88,8 @@ function getFeed(){
 //                  msg = "<p><b>" + results.rows.item(i).title + "</b></p>";
 //                  $("#rssContent").append(msg);
             	   $("#rssContent").append('<div class="feed"><div class="image"><img src=' + results.rows.item(i).image + ' width=' + width + 'px /><div class="title"> Title:' + results.rows.item(i).title 
-			        		+ '</div><br><div class="description">Desc: ' + results.rows.item(i).description + '</div></div>');
+			        		+ '</div><br><div class="description">Desc: ' + results.rows.item(i).description + '</div><div class="pubDate"> pubDate:' + results.rows.item(i).pubDate 
+			        		+ '</div></div>');
                }
             }, onError);
          });

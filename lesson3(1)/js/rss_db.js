@@ -1,4 +1,3 @@
-
 window.onload = function () {
 	
 	var indicator = document.getElementById("indicator");
@@ -11,7 +10,7 @@ window.onload = function () {
 var indexedDB 	  = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB,
 IDBTransaction  = window.IDBTransaction || window.webkitIDBTransaction || window.msIDBTransaction,
 baseName 	  = "filesBase7",
-storeName 	  = "filesStore7";
+storeName 	  = "filesStore75";
 
 
 
@@ -43,13 +42,17 @@ function getFeed(){
 			    				  {
 			    				   var url=value[fieldValue];
 			    				  }
+			    			  case 'pubDate':
+			    				  {
+			    				  var pubDate=value[fieldValue];
+			    				  }
 
 			    			}
 			    		}
 			    		
 			    //	$("#rssContent").append("key: " + field + "<br> значение: " + value[fieldValue] + "<br><br>-------------<br>");
 					        $("#rssContent").append('<div class="feed"><div class="image"><img src="' + url + '" width=' + width + 'px /><div class="title"> Title:' + title 
-					        		+ '</div><br><div class="description">description: ' + description + '</div></div>');
+					        		+ '</div><br><div class="description">description: ' + description + '</div><br><div class="pubDate">pubDate:'+ pubDate+'</div></div>');
 			    		}
 			    		}),
 		        success: xmlParser
@@ -65,11 +68,10 @@ function getFeed(){
 		    	  var url =  $(this).find("enclosure").attr('url')
 
 		    	  
-			        $("#rssContent").append('<div class="feed"><div class="image"><img src=' + url + ' width=' + width + 'px /><div class="title"> Title:' + $(this).find("title").text() 
-			        		+ '</div><br><div class="description">Desc: ' + $(this).find("description").text() + '</div></div>');
+					        $("#rssContent").append('<div class="feed"><div class="image"><img src="' + url + '" width=' + width + 'px /><div class="title"> title:' + $(this).find("title").text()+ '</div><br><div class="description">description: ' + $(this).find("description").text() + '</div><br><div class="pubDate">pubDate:'+ $(this).find("pubDate").text()+'</div></div>');
 
 		    	  var base=Urlfunc($(this).find("enclosure").attr('url'));
-		          arr[i] = { title:$(this).find("title").text(), description:$(this).find("description").text(), image:base};
+		          arr[i] = { title:$(this).find("title").text(), description:$(this).find("description").text(), image:base,pubDate:$(this).find("pubDate").text()};
 		    	
 		    	  setData(arr[i]); // чем плоха данная схема? переделать на передачу массива.
 		          
