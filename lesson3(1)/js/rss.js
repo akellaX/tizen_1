@@ -27,6 +27,9 @@ function getFeed(){
 		});
 
 		function xmlParser(xml) {
+			
+			var title=[];
+			
 
 			indicator.style.display = "none";
 		    $(xml).find("item").each(function () {
@@ -34,9 +37,11 @@ function getFeed(){
 
 		        $("#rssContent").append('<div class="feed"><div class="image"><img src=' + url + ' width=' + width + 'px /><div class="title"> Title:' + $(this).find("title").text() 
 		        		+ '</div><br><div class="description">Desc: ' + $(this).find("description").text() + '</div></div>');
-		       
-
+		    	  
+		    	 title.push($(this).find("title").text());
 		    });
+		    
+		    alert(title);
 
 		}
 
